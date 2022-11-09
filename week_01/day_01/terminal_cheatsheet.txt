@@ -1,0 +1,16 @@
+pwd - Print Working Directory, shows where we are in the tree
+cd - Change directory
+cd .. - Move up one directory
+ls - Lists current directory's contents
+mkdir - Makes a directory, or folder
+touch - Makes a file
+rm - Removes (deletes) a file
+  rm -r - Removes a directory and recursively deletes the contents
+rmdir - same as above, but only on 
+mv - Moves a file (can also rename by adding new name at end)
+mv -r - moves a folder
+cp - copies a file (cp -r to move directory)
+Up arrow - Shows previous commands
+History - Shows list of previous commands
+
+cmd + K to clear the terminal
