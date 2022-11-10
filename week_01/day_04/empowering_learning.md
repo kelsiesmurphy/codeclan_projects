@@ -26,8 +26,8 @@ Book recommendations
 
  # Problem Solving
 
- **B**rain
- **B**ooks (Google)
- **B**uddy
- **B**oss(Instructor)
- **B**reaks
+ - **B**rain
+ - **B**ooks (Google)
+ - **B**uddy
+ - **B**oss(Instructor)
+ - **B**reaks
