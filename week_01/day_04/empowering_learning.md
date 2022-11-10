@@ -1,6 +1,8 @@
-## Empowering your learning
+# Empowering your learning
 
-**1) The Mindset**
+[Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
+
+## The Mindset
 
 Our mindset, Time we have at hand and our energy levels are important
 Learning involves taking in the content, digesting it and absorbing it to make it your own.
