@@ -21,3 +21,13 @@ Focused vs Diffused ways of thinking
 Book recommendations
  - [Deep Work by Cal Newport](https://www.calnewport.com/books/deep-work/)
  - [NIR EYAL, Indistractible](https://www.nirandfar.com/indistractable/)
+
+
+
+ # Problem Solving
+
+ **B**rain
+ **B**ooks (Google)
+ **B**uddy
+ **B**oss(Instructor)
+ **B**reaks
