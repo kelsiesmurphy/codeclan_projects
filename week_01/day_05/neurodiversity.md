@@ -13,7 +13,8 @@ And many more!
 Ableism is something neurodiverse people face every day.
 Typically burn out faster, face bullying, underempoyed and more.
 
-##Don't!
+## Don't!
+
 - Don't treat neurodivergent people based on assumptions or stereotypes
 - Not all neurodivergent poeple are the same
 - Your experiences are not the same as ours
