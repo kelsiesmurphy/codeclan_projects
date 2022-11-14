@@ -1,6 +1,6 @@
-from modules.car import *
-from modules.engine import *
-from modules.gearbox import *
+from src.modules.car import *
+from src.modules.engine import *
+from src.modules.gearbox import *
 
 engine = Engine(2)
 gearbox = Gearbox(6)

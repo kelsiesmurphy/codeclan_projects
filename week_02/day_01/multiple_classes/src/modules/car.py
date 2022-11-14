@@ -4,3 +4,9 @@ class Car:
         self.model = model
         self.engine = engine
         self.gearbox = gearbox
+        self.miles = 0
+
+
+    def add_miles(self, go):
+        if go == True:
+            self.miles += 5
