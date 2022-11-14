@@ -14,6 +14,7 @@ class Team:
             return False
 
     #  EXTENSIONS
+    
     points = 0
     def play_game(self, has_won):
         if has_won:
