@@ -6,3 +6,6 @@ def personal_best(scores):
 
 def personal_top_three(scores):
     pass
+
+def ordered_high_to_low(scores):
+    sorted(scores)
