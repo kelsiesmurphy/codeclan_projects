@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body > header {
+    background-color: dodgerblue;
+    color: white;
+    padding: 16px;
+}
+
+body > header > h1{
+    margin: 0;
+}
+
+body > header > nav > ul {
+    list-style: none;
+}
+
+body > header > nav > ul > li > a {
+    color: white;
+}
+
+article {
+    width: 70%;
+    margin: auto;
+}
+
+body > main > footer {
+    padding: 4px 16px;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+}
