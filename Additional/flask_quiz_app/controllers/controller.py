@@ -1,18 +1,20 @@
 from flask import render_template, request # ADDED
 from app import app
-from models.task import Task
-from models.todo_list import tasks, add_new_task
+from models.question_list import questions
+from models.question import Question
 
-@app.route('/tasks')
+@app.route('/')
 def index():
-    return render_template('index.html', title='Home', tasks=tasks)
+    return render_template('index.html', title='Home', questions=questions)
 
-
-@app.route('/tasks', methods=['POST'])
-def add_task():
-    form_data = request.form
-    title = form_data["title"]
-    description = form_data["description"]
-    new_task = Task(title, description, False)
-    add_new_task(new_task)
-    return render_template('index.html', title='Home', tasks=tasks)
+@app.route("/", methods=['GET', 'POST'])
+def correct_answer():
+    if request.method == 'POST':
+        if request.form.get('action1') == 'Porsche':
+            return "correct!" # do something
+        else:
+            return "False!" # unknown
+    elif request.method == 'GET':
+        return render_template('index.html', title='Home', questions=questions)
+    
+    return render_template("index.html")

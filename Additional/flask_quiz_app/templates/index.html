@@ -1,26 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>My Todo List!</h1>
-
-  <form action="/tasks" method="post">
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title">
-    <label for="title">Description</label>
-    <textarea name="description" rows="2" cols="30" id="description"></textarea>
-    <input type="submit" value="Add Task">
-  </form>
-
-  {% for task in tasks %}  
-    <div>
-      <p>
-        {{ task.title }}: <b>{{ task.description }}</b>
-        {% if task.done %}
-          <span> &#9989; </span>
-        {% else %}
-          <span> &#10060; </span>
-        {% endif %}
-      </p>
-    </div>
-  {% endfor %}
+  <section class="main-wrapper">
+    <h1>Flask Cards!</h1>
+    {% for question in questions %}  
+      <div class="question-wrapper">
+        <p class="question">{{ question.question }}</p>
+          <form method="post" class="answer-grid" action="/">
+            {% for answer in question.answers %}
+              <input type="submit" class="answer" value="{{ answer }}" name="action1"/>
+            {% endfor %}
+          </form>
+      </div>
+      <hr>
+    {% endfor %}
+    </section>
 {% endblock %}
