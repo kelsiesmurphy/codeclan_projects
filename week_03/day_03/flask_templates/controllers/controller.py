@@ -10,7 +10,7 @@ def index():
 def show_tasks():
     return render_template("index.html", title="Home", tasks=tasks)
 
-@app.route("/tasks/<task_id>")
+@app.route("/tasks/<int:task_id>")
 def show_task(task_id):
-    task = task[task_id]
+    task = tasks[task_id]
     return render_template("task.html", title="Task", task=task)
