@@ -4,5 +4,12 @@
     </head>
     <body>
         <h1>My Todo List!</h1>
+        {% for task in tasks %}
+            <form>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> {{ task.title }}: <b>{{ task.description }}</b></label><br> 
+            </form>
+        {% endfor %}
+
     </body>
     </html>
