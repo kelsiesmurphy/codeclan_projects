@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>All Orders</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="main-container">
+            <h1>All Orders!</h1>
+            {% for order in all_orders %}
+                <div class="cell_wrapper">
+                    <div class="left-side">
+                        <h3>Order Title</h3>
+                        <p>{{ order.media_title }}</p>
+                        <h3>Order Description</h3>
+                        <p>{{ order.description }}</p>
+                        <ul>
+                            <li>Quantity: <b>{{ order.quantity }}</b></li>
+                            <li>Customer: <b>{{ order.customer_name }}</b></li>
+                            <li>Date: <b>{{ order.order_date }}</b></li>
+                        </ul>
+                    </div>
+                    <div class="right-side">
+                        <a id="link" href="/all_orders/{{ order.order_id }}">Open Order</a>
+                    </div>
+                </div>
+                <hr>
+                
+            {% endfor %}
+        </section>
+
+    </body>
+    </html>

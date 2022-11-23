@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>My Order</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h2>Order Title</h2>
+            <p>{{ order.media_title }}</p>
+            <h3>Order Description</h3>
+            <p>{{ order.description }}</p>
+            <h4>Order Quantity</h4>
+            <p>{{ order.quantity }}</p>
+            <h4>Order Customer</h4>
+            <p>{{ order.customer_name }}</p>
+            <h4>Order Date</h4>
+            <p>{{ order.order_date }}</p>
+    </body>
+</html>
