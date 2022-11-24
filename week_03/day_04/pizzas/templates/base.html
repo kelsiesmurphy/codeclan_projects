@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Kelsie's Pizza App!</title>
+</head>
+<body>
+    <header>
+        <h1>Kelsie's Pizza App</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                    <a href="/orders">Orders</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <section>
+            <h2>Our site</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                        <a href="/orders">Orders</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+</body>
+</html>
