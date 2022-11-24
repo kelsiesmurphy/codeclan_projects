@@ -1,4 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #FCFCFC;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+header, footer {
+    background-color: #667085;
+    color: white;
+    padding: 2rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 960px;
+    margin: auto;
+    min-height: 70vh;
 }
