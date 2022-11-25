@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Upcoming Events</h2>
+    <section class="events-wrapper">
+        {% for event in events %}
+            <div class="event-cell">
+                <h3>{{ event.event_name }}</h3>
+                <p>{{ event.room_location }}</p>
+                <hr>
+                <p>{{ event.date.strftime("%b %d %Y") }}</p>
+                <p>{{ event.guest_no }} attendees</p>
+                <p>
+                    {% if event.recurring %}
+                        Recurring: Every 4 weeks
+                    {% elif not event.recurring %}
+                        Does not repeat
+                    {% else %}
+                        Null
+                    {% endif %}
+                </p>
+                <hr>
+                <p>{{ event.description }}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
