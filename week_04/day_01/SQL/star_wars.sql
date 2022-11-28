@@ -1,5 +1,6 @@
-DROP TABLE characters;
 DROP TABLE lightsabers;
+DROP TABLE characters;
+
 
 CREATE TABLE characters(
     id SERIAL PRIMARY KEY,
@@ -23,7 +24,7 @@ INSERT INTO characters (name, darkside) VALUES ('Yoda', false);
 
 INSERT INTO lightsabers(colour, hilt_metal, character_id) VALUES ('green', 'palladium', 2);
 INSERT INTO lightsabers(colour, hilt_metal, character_id) VALUES ('red', 'gold', 3);
-INSERT INTO lightsabers(colour, hilt_metal, character_id) VALUES ('blue', 'titanium', 4);
+INSERT INTO lightsabers(colour, hilt_metal, character_id) VALUES ('red', 'copper', 3);
 
 
 
@@ -55,3 +56,5 @@ UPDATE characters SET age=29 WHERE id=9;
 
 SELECT * FROM characters;
 SELECT * FROM lightsabers;
+
+SELECT * FROM lightsabers WHERE character_id=3;
