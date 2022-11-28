@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+    <h1>Player 2:</h1>
+    <form action="/play2" method="post">
+        <input type="submit" id="rock" value="Rock">
+        <input type="submit" id="paper" value="Paper">
+        <input type="submit" id="scissors" value="Scissors">
+    </form>
+{% endblock %}
