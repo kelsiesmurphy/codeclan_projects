@@ -15,6 +15,8 @@ user_repository.create(user_2)
 task_1 = Task("Go for run", user_1, 20)
 task_repository.save(task_1)
 
+found_tasks = user_repository.tasks(user_1)
+
 # task_1.mark_complete()
 # task_repository.update(task_1)
 

@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 
 from models.task import Task
+import repositories.user_repository as user_repository
   
 def select_all():  
     tasks = [] 
@@ -9,7 +10,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        task = Task(row['description'], row['user'], row['duration'], row['completed'], row['id'] )
+        user = user_repository.read_user(row['user_id'])
+        task = Task(row['description'], user, row['duration'], row['completed'], row['id'] )
         tasks.append(task)
     return tasks 
 
@@ -29,7 +31,8 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        task = Task(result['description'], result['user_id'], result['duration'], result['completed'], result['id'])
+        user = user_repository.read_user(result['user_id'])
+        task = Task(result['description'], user, result['duration'], result['completed'], result['id'])
         return task
 
 def delete_all():

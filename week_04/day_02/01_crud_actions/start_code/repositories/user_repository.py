@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.user import User
+from models.task import Task
   
 
 def create(user):
@@ -43,3 +44,13 @@ def delete(user):
 def delete_all():
     sql = "DELETE FROM users"
     run_sql(sql)
+
+def tasks(user):
+    tasks = []
+    sql = "SELECT * FROM tasks WHERE user_id = %s"
+    values = [user.id]
+    results = run_sql(sql, values)
+    for row in results:
+        task = Task(row['description'], user, row['duration'], row['completed'], row['id'])
+        tasks.append(task)
+    return tasks
