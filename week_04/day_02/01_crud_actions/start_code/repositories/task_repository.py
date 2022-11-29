@@ -36,7 +36,7 @@ def select(id):
         return task
 
 def delete_all():
-    sql = f"DELETE FROM tasks"
+    sql = "DELETE FROM tasks"
     run_sql(sql)
 
 def update(task):
