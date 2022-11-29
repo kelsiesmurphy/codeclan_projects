@@ -1,10 +1,15 @@
 import pdb 
 from models.task import Task
-import repositories.task_repository as task_repository  
+import repositories.task_repository as task_repository
 
-result = task_repository.select_all()
+task_1 = Task("Go for run", "Jack Jarvis", 20)
+task_repository.save(task_1)
 
-for task in result:
-    print(task.__dict__)
+found = task_repository.select(task_1.id)
+
+# result = task_repository.select_all()
+
+# for task in result:
+#     print(task.__dict__)
 
 pdb.set_trace()
