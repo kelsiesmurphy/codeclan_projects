@@ -31,3 +31,7 @@ def select(id):
         result = results[0]
         task = Task(result['description'], result['assignee'], result['duration'], result['completed'], result['id'])
         return task
+
+def delete_all():
+    sql = f"DELETE FROM tasks"
+    run_sql(sql)

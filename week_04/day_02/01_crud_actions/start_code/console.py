@@ -2,6 +2,8 @@ import pdb
 from models.task import Task
 import repositories.task_repository as task_repository
 
+task_repository.delete_all()
+
 task_1 = Task("Go for run", "Jack Jarvis", 20)
 task_repository.save(task_1)
 
