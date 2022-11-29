@@ -9,14 +9,14 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        task = Task(row['description'], row['assignee'], row['duration'], row['completed'], row['id'] )
+        task = Task(row['description'], row['user'], row['duration'], row['completed'], row['id'] )
         tasks.append(task)
     return tasks 
 
 def save(task):
-    sql = f"""INSERT INTO tasks (description, assignee, duration, completed) 
+    sql = f"""INSERT INTO tasks (description, user_id, duration, completed) 
     VALUES (%s, %s, %s, %s) RETURNING *"""
-    values = [task.description, task.assignee, task.duration, task.completed]
+    values = [task.description, task.user.id, task.duration, task.completed]
     results = run_sql(sql, values)
     id = results[0]["id"]
     task.id = id
@@ -29,7 +29,7 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        task = Task(result['description'], result['assignee'], result['duration'], result['completed'], result['id'])
+        task = Task(result['description'], result['user_id'], result['duration'], result['completed'], result['id'])
         return task
 
 def delete_all():
@@ -37,7 +37,7 @@ def delete_all():
     run_sql(sql)
 
 def update(task):
-    sql = "UPDATE tasks SET (description, assignee, duration, completed) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [task.description, task.assignee, task.duration, task.completed, task.id]
+    sql = "UPDATE tasks SET (description, user_id, duration, completed) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [task.description, task.user.id, task.duration, task.completed, task.id]
     run_sql(sql, values)
 
