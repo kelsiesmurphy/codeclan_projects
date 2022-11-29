@@ -35,3 +35,9 @@ def select(id):
 def delete_all():
     sql = f"DELETE FROM tasks"
     run_sql(sql)
+
+def update(task):
+    sql = "UPDATE tasks SET (description, assignee, duration, completed) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [task.description, task.assignee, task.duration, task.completed, task.id]
+    run_sql(sql, values)
+
