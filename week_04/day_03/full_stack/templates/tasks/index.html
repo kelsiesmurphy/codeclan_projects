@@ -1,4 +1,29 @@
 {% extends "base.html" %}
+
 {% block content %}
-New Tasks page
+    {% for row in all_tasks_key %}
+        
+            <div class="task">
+                <div class="content">
+                    <div class="name">{{row.user.first_name}}</div>
+                    <div class="description">
+                        <a href="/tasks/{{row.id}}">{{ row.description }}</a>
+                        <span class="duration">{{ row.duration }} mins</span>
+                    </div>
+                    <div class="buttons">
+                        <form class="delete-form" action="/tasks/{{row.id}}/delete", method="post">
+                            <button class="trash-button">
+                                <i class="fa fa-trash-o fa-3x" style="color: red;"></i>
+                            </button>
+                        </form>
+                        {% if row.completed %}
+                            <i class="fa fa-check fa-2x" style="color: green;"></i>
+                        {% else %}
+                            <i class="fa fa-times fa-2x" style="color: red"></i>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    
 {% endblock content %}
