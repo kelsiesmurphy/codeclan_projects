@@ -1,3 +1,4 @@
+DROP TABLE visits;
 DROP TABLE users;
 DROP TABLE locations;
 
@@ -11,3 +12,11 @@ CREATE TABLE locations (
   category VARCHAR(255),
   name VARCHAR(255)
 );
+
+CREATE TABLE visits (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id) ON DELETE CASCADE,
+  location_id INT REFERENCES locations(id) ON DELETE CASCADE,
+  review TEXT
+);
+
