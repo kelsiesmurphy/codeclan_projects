@@ -38,4 +38,12 @@ visit_repository.save(visit3)
 visit4 = Visit(user2, location2, '3 stars, too crowded, could not find my wizard friend')
 visit_repository.save(visit4)
 
+locations = user_repository.locations(user1)
+for location in locations:
+    print(location.__dict__)
+
+users = location_repository.users(location1)
+for user in users:
+    print(user.__dict__)
+
 pdb.set_trace()
