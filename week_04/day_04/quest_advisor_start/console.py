@@ -1,4 +1,3 @@
-import pdb
 from models.location import Location
 from models.user import User
 from models.visit import Visit
@@ -45,5 +44,3 @@ for location in locations:
 users = location_repository.users(location1)
 for user in users:
     print(user.__dict__)
-
-pdb.set_trace()
