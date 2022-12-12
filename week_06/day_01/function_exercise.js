@@ -1,14 +1,14 @@
 // 1. Declare a named function that takes an array of numbers as an argument and returns the sum (total) of all the numbers in the array
-var numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+var numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function totalNum(listOfNums) {
-    var total = 0
+    var total = 0;
     for (var number of listOfNums) {
-        total += number
+        total += number;
     }
-    return total
+    return total;
 }
-console.log(totalNum(numArray))
+console.log(totalNum(numArray));
 
 
 /* 2. Write an anonymous function expression that takes two arguments:
