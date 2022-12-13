@@ -137,8 +137,8 @@ movie.ratings = {
 
 // Loop over an object using 'for _ in'
 for (var key in movie) {
-    // console.log('Key was: ', key, 'value was:', movie[key])
-    // console.log(`Key was ${key}, value was ${movie[key]}`)
+    console.log('Key was: ', key, 'value was:', movie[key])
+    console.log(`Key was ${key}, value was ${movie[key]}`)
 }
 
 var movieKeys = Object.keys(movie);
