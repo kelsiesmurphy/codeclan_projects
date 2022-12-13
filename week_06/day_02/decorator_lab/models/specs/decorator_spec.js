@@ -34,7 +34,7 @@ describe('Decorator', function(){
         decorator.addPaint(10);
         const litres = decorator.totalLitres();
         const actual = decorator.checkPaint(litres, room.area);
-        assert.strictEqual(actual, true)
+        assert.strictEqual(actual, true);
     });
     it('be able to paint a room if it has enough paint in stock', function(){
         decorator.addPaint(10);
@@ -70,11 +70,10 @@ describe('Decorator', function(){
             decorator.addPaint(10);
             decorator.addPaint(0);
             decorator.addPaint(0);
-            // need to remove 30 litres of paint as the room is 30 sq metres
-            const litres = decorator.totalLitres();
-            let enoughPaint = decorator.checkPaint(litres, room.area);
-            const actual = decorator.removeEmpties(enoughPaint).length
-            assert.strictEqual(actual, 4)
+
+            decorator.removeEmpties();
+            const actual = decorator.checkLength();
+            assert.strictEqual(actual, 4);
         });
     })
 })
