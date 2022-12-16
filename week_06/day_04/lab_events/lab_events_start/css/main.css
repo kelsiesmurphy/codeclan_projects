@@ -1,0 +1,20 @@
+body {
+  font-family: Palatino;
+  margin: 80px 60px;
+}
+
+#form-wrapper {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+
+#new-item-form {
+  flex-direction: column;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px
+}
