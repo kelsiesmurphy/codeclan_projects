@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
-import {useState} from 'react';
-
+c
 function App() {
 
   const [items, setItems] = useState([
@@ -49,7 +48,7 @@ function App() {
         {itemNodes}
       </ul>
 
-      <form onSubmit={saveNewItem}>
+      <form>
         <label htmlFor="new-item">Add a new item</label>
         <input id="new-item" type="text" value={newItem} onChange={handleItemInput}/>
         <input type="submit" value = "Save New Item"/>
