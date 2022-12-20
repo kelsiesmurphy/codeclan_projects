@@ -2,7 +2,9 @@ import CommentBox from './containers/CommentBox';
 
 function App() {
   return (
-    <CommentBox />
+    <>
+      <CommentBox />
+    </>
   );
 }
 

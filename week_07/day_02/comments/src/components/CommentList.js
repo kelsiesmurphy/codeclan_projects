@@ -1,11 +1,17 @@
 import Comment from "./comment";
 
-const CommentList = () => {
+const CommentList = ({ comments }) => {
+	const commentNodes = comments.map(comment => {
+		return (
+			<Comment key={comment.id} author={comment.author}>
+				{comment.text}
+			</Comment>
+		);
+	});
+
 	return (
 		<>
-			<Comment />
-			<Comment />
-			<Comment />
+			{commentNodes}
 		</>
 	);
 };
