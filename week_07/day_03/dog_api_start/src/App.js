@@ -1,3 +1,6 @@
+
+
+
 import {useState, useEffect} from "react";
 import './App.css';
 
@@ -19,7 +22,6 @@ function App() {
     <div id="app">
     <h1>{setup.setup}</h1>
     <h2>{setup.delivery}</h2>
-    {/* <img id="dog-img" src={dogImgUrl} /> */}
     <button onClick={fetchJoke}>Gimme those jokes!</button>
     </div>
   );

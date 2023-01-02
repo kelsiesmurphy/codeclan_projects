@@ -10,4 +10,4 @@ const ListItem = ({country, onCountryClicked}) => {
   return <li onClick={handleClick}>{country.name.common}</li>
 }
 
-export default ListItem;
+export default ListItem;c

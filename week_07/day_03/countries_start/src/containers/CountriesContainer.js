@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import CountryDetail from '../components/CountryDetail';
 import CountryList from '../components/CountryList';
 import CountrySelector from '../components/CountrySelector';
