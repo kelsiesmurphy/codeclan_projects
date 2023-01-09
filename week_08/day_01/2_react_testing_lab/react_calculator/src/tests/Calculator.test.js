@@ -106,9 +106,12 @@ describe('Calculator', () => {
     fireEvent.click(number8);
     fireEvent.click(multiplySign);
     fireEvent.click(number6);
-    fireEvent.click(clearButton);
     fireEvent.click(equalsSign);
-    expect(runningTotal.textContent).toEqual('0');
+    fireEvent.click(clearButton);
+    fireEvent.click(multiplySign);
+    fireEvent.click(number6);
+    fireEvent.click(equalsSign);
+    expect(runningTotal.textContent).toEqual('288');
   })
 })
 
