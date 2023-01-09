@@ -13,7 +13,7 @@ const Counter = () => {
 
   return (
     <>
-      <h1 data-testid="counter">{counter}</h1>
+      <h1 data-testid="counter" id="counter">{counter}</h1>
       <button data-testid="button-up" onClick={incrementCounter}> Up</button>
       <button data-testid="button-down" onClick={decrementCounter}>Down</button>
     </>
