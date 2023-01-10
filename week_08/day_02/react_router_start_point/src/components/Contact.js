@@ -1,10 +1,8 @@
 import React from 'react'
-import Navigation from './Navigation'
 
 const Contact = () => {
   return (
     <div>
-        <Navigation />
         <h4>Contact</h4>
         <p>Contact us for more details</p>
         <form>
