@@ -32,7 +32,7 @@ const MainContainer = () => {
         <div>
             <h1>Characters</h1>
             <CharacterSelect characters={ characters } handleSelectChange={ handleSelectChange } />
-            { selectedCharacter ? <CharacterDetail character={ selectedCharacter } episodes={episodes} /> : null }
+        { selectedCharacter ? <CharacterDetail character={ selectedCharacter } episodes={episodes} /> : null }
         </div>
     )
 }
