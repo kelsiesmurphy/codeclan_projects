@@ -63,8 +63,8 @@ const createRouter = function (collection) {
 
   // Update (individual game)
   router.put('/:id', (req, res) => {
-    const updatedGameData = req.body;
     const id = req.params.id;
+    const updatedGameData = req.body;
     collection
       .updateOne(
         { _id: ObjectID(id) }, 
