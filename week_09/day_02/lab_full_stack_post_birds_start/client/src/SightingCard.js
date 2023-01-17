@@ -10,7 +10,7 @@ const SightingCard = ({sighting, removeSighting}) => {
     }
     return (
         <>
-            <h1>{sighting.species}</h1>
+            <h1 className="text-3xl font-bold underline">{sighting.species}</h1>
             <p>Location: {sighting.location}</p>
             <p>Date: {sighting.date}</p>
             <button onClick={handleDelete}> 🗑 </button>
