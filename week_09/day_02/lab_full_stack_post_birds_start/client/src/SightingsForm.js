@@ -38,6 +38,7 @@ const SightingsForm = ({addSighting}) => {
                     type="text" 
                     id="species" 
                     name="species"
+                    name=
                     value={formData.species} />
             </div>
             <div className="formWrap">
