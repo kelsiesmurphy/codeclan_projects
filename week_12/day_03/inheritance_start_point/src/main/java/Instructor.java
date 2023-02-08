@@ -1,5 +1,15 @@
 public class Instructor extends Person {
-    public Instructor(String name, String cohort) {
+    private String moduleTeam;
+    public Instructor(String name, String cohort, String moduleTeam) {
         super(name, cohort);
+        this.moduleTeam = moduleTeam;
+    }
+
+    public String getModuleTeam() {
+        return moduleTeam;
+    }
+
+    public void setModuleTeam(String moduleTeam) {
+        this.moduleTeam = moduleTeam;
     }
 }

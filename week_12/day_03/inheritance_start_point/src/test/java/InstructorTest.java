@@ -9,7 +9,7 @@ public class InstructorTest {
 
     @Before
     public void before(){
-        instructor = new Instructor("Colin", "G6");
+        instructor = new Instructor("Colin", "G6", "Javascript");
     }
 
 
