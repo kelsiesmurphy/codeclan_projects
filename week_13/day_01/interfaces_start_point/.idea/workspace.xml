@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e96b6d1d-a158-40cf-9e82-ef41e478ff97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/IMove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/IStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/IStop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week_12/day_04/StaticTesting/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../week_12/day_04/StaticTesting/StaticTesting.iml" beforeDir="false" />
+    <list default="true" id="e96b6d1d-a158-40cf-9e82-ef41e478ff97" name="Changes" comment="Adding interfaces work">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +82,14 @@
       <option name="presentableId" value="Default" />
       <updated>1676286791303</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adding interfaces work">
+      <created>1676289027693</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676289027693</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,5 +102,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding interfaces work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding interfaces work" />
   </component>
 </project>
