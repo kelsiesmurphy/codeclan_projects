@@ -1,6 +1,7 @@
 package device_management;
+import behaviours.IOutput;
 
-public class Printer extends PrintingDevice {
+public class Printer extends PrintingDevice implements IOutput {
     private int dpi;
     private int printSpeed;
 
