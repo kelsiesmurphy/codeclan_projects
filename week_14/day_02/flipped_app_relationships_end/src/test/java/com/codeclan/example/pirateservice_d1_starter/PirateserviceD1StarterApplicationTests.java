@@ -27,31 +27,31 @@ public class PirateserviceD1StarterApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		//NB: ONLY used for testing purposes to clear the DB, not to be used in production code
-		//Note you must delete in order ( Pirates, Ships, Raids) to main the referential integrity of the DB
-		pirateRepository.deleteAll();
 	}
 
 	@Test
-	public void createSinglePirateAndSave(){
-		Ship ship = new Ship("Jolly Roger");
+	public void createPirateAndShip(){
+		Ship ship = new Ship("The Floating Pineapple");
 		shipRepository.save(ship);
 
-		Pirate pirate = new Pirate("Jack", "Sparrow", 32, ship);
-		pirateRepository.save(pirate);
+		Pirate pirate1 = new Pirate("SpongeBob", "SquarePants", 32, ship);
+		pirateRepository.save(pirate1);
 	}
 
 	@Test
-	public void canAddPirateToRaid(){
-		Ship ship = new Ship("Jolly Roger");
+	public void addPiratesAndRaids(){
+		Ship ship = new Ship("The Flying Dutchman");
 		shipRepository.save(ship);
-		Pirate pirate = new Pirate("Jack", "Sparrow", 32, ship);
-		pirateRepository.save(pirate);
-		Raid raid = new Raid("Glasgow", 100);
-		raidRepository.save(raid);
 
-		raid.addPirate(pirate);
-		raidRepository.save(raid);
+		Pirate pirate1 = new Pirate("Jack", "Sparrow", 32, ship);
+		pirateRepository.save(pirate1);
+
+		Raid raid1 = new Raid("Tortuga", 100);
+		raidRepository.save(raid1);
+
+		raid1.addPirate(pirate1);
+		raidRepository.save(raid1);
+
 	}
 
 }

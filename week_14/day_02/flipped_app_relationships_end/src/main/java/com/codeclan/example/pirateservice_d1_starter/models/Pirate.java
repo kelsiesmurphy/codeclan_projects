@@ -1,5 +1,8 @@
 package com.codeclan.example.pirateservice_d1_starter.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,30 +24,30 @@ public class Pirate {
     @Column(name = "age")
     private int age;
 
+    //Ordinarily a foreign key constraint is not nullable,however in this
+    //instance it is possible for a pirate to exist without a ship
     @ManyToOne
-    @JoinColumn(name = "ship_id", nullable = false)
+    @JoinColumn(name = "ship_id", nullable = true)
+    @JsonIgnoreProperties({"pirates"})
     private Ship ship;
 
     @ManyToMany
+    @JsonIgnoreProperties({"pirates"})
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
             name = "pirates_raids",
-            joinColumns = {
-                    @JoinColumn(
-                            name = "pirate_id",
-                            nullable = false,
-                            updatable = false
-                    )
+            joinColumns = { @JoinColumn(
+                    name = "pirate_id",
+                    nullable = false,
+                    updatable = false)
             },
-            inverseJoinColumns = {
-                    @JoinColumn(
-                            name = "raid_id",
-                            nullable = false,
-                            updatable = false
-                    )
+            inverseJoinColumns = { @JoinColumn(
+                    name = "raid_id",
+                    nullable = false,
+                    updatable = false)
             }
     )
     private List<Raid> raids;
-
 
     public Pirate(String firstName, String lastName, int age, Ship ship) {
         this.firstName = firstName;
