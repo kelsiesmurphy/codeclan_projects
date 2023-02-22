@@ -1,30 +1,36 @@
-package com.codeclan.example.pirateservice_d1_starter.components;
+package com.example.codeclan.pirateservice.components;
 
-import com.codeclan.example.pirateservice_d1_starter.models.Pirate;
-import com.codeclan.example.pirateservice_d1_starter.models.Raid;
-import com.codeclan.example.pirateservice_d1_starter.models.Ship;
-import com.codeclan.example.pirateservice_d1_starter.repositories.PirateRepository;
-import com.codeclan.example.pirateservice_d1_starter.repositories.RaidRepository;
-import com.codeclan.example.pirateservice_d1_starter.repositories.ShipRepository;
+import com.example.codeclan.pirateservice.models.Pirate;
+import com.example.codeclan.pirateservice.models.Raid;
+import com.example.codeclan.pirateservice.models.Ship;
+import com.example.codeclan.pirateservice.repository.PirateRepository;
+import com.example.codeclan.pirateservice.repository.RaidRepository;
+import com.example.codeclan.pirateservice.repository.ShipRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile("!test")
+@Profile("!test") //Run every time EXCEPT Tests
 @Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
-    private PirateRepository pirateRepository;
-    @Autowired
-    private ShipRepository shipRepository;
-    @Autowired
-    private RaidRepository raidRepository;
+    PirateRepository pirateRepository;
 
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
+    @Autowired
+    ShipRepository shipRepository;
+
+    @Autowired
+    RaidRepository raidRepository;
+
+
+    public DataLoader() {
+
+    }
+
+    public void run(ApplicationArguments args) {
         Ship dutchman = new Ship("The Flying Dutchman");
         shipRepository.save(dutchman);
 
@@ -116,5 +122,6 @@ public class DataLoader implements ApplicationRunner {
 
         raid6.addPirate(henry);
         raidRepository.save(raid6);
+
     }
 }
