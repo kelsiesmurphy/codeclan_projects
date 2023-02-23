@@ -1,5 +1,9 @@
 class Request {
-    // TODO: methods to handle requests to API
+    // Fetch data from the API
+    async get (url) {
+        const result = await fetch(url);
+        return result.json();
+    }
 }
 
 export default Request;

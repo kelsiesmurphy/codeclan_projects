@@ -9,7 +9,7 @@ const Pirate = ({ pirate }) => {
   }
   const url = "/pirates/" + pirate.id;
   return (
-    <Fragment>
+    <>
       <p>
         <Link to={url} className="name">
           {pirate.firstName} {pirate.lastName}
@@ -17,7 +17,7 @@ const Pirate = ({ pirate }) => {
       </p>
       <p>Age: {pirate.age}</p>
       <p>Ship: {pirate.ship.name}</p>
-    </Fragment>
+    </>
   )
 }
 

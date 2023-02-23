@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import PirateList from '../components/pirates/PirateList';
+import RaidList from '../components/raids/RaidList';
+import ShipList from '../components/ships/ShipList';
 import PirateDetail from '../components/pirates/PirateDetail';
 import PirateForm from '../components/pirates/PirateForm';
+import Request from '../helpers/request';
 
 const PirateContainer = () => {
 
@@ -11,10 +14,11 @@ const PirateContainer = () => {
   const [raids, setRaids] = useState([])
 
   useEffect(() => {
-    // TODO update to use API request
-    const piratePromise = [];
-    const shipPromise = [];
-    const raidPromise = [];
+    const request = new Request();
+
+    const piratePromise = request.get('/api/pirates');
+    const shipPromise = request.get('/api/ships');
+    const raidPromise = request.get('/api/raids');
 
     Promise.all([piratePromise, shipPromise, raidPromise])
       .then((data) => {
@@ -55,6 +59,8 @@ const PirateContainer = () => {
         <PirateDetailWrapper />
       } />
       <Route path="/" element={<PirateList pirates={pirates} />} />
+      <Route path="/ships" element={<ShipList ships={ships} />} />
+      <Route path="/raids" element={<RaidList raids={raids} />} />
     </Routes>
   )
 

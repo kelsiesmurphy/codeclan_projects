@@ -14,10 +14,10 @@ const NavBar = () => {
           <Link to="/pirates/new">Create Pirate</Link>
         </li>
         <li className="navLink">
-          <Link to="/ships">Ships</Link>
+          <Link to="/pirates/ships">Ships</Link>
         </li>
         <li className="navLink">
-          <Link to="/raids">Raids</Link>
+          <Link to="/pirates/raids">Raids</Link>
         </li>
       </ul>
     </header>
